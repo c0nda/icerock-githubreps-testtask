@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GitHub Reps</string>
+
+    <string name="auth_token_label">Personal access token</string>
+    <string name="auth_sign_in_button">SIGN IN</string>
+    <string name="auth_error_empty_token">Enter your access token</string>
+    <string name="auth_error_invalid_token">Invalid token</string>
+    <string name="auth_error_dialog_title">Error</string>
+    <string name="auth_error_dialog_ok">OK</string>
+
+    <string name="server_error">Server error</string>
+    <string name="try_later">Try again later</string>
+    <string name="not_found_error">Not found</string>
+    <string name="not_found_error_message">The resource does not exist</string>
+    <string name="empty">Empty</string>
+    <string name="connection_error">Connection error</string>
+    <string name="check_connection">Check your Internet connection</string>
+    <string name="list_empty">No repositories at the moment</string>
+
+    <string name="repositories_title">Repositories</string>
+    <string name="retry">RETRY</string>
+    <string name="refresh">REFRESH</string>
+
+    <string name="repository_stars">stars</string>
+    <string name="repository_forks">forks</string>
+    <string name="repository_watchers">watchers</string>
+    <string name="repository_star_count_desc">%1$d stars</string>
+    <string name="repository_fork_count_desc">%1$d forks</string>
+    <string name="repository_watcher_count_desc">%1$d watchers</string>
+
+    <string name="details_license">License</string>
+    <string name="details_readme_empty">No README.md</string>
+
+    <string name="back_content_description">Back</string>
+    <string name="logout_content_description">Log out</string>
+</resources>
