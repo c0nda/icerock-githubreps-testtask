@@ -34,6 +34,7 @@ import com.vorontsov.githubrepsicerock.R
 import com.vorontsov.githubrepsicerock.domain.model.Repository
 import com.vorontsov.githubrepsicerock.presentation.common.EmptyContent
 import com.vorontsov.githubrepsicerock.presentation.common.ErrorContent
+import com.vorontsov.githubrepsicerock.presentation.common.LanguageColorProvider
 import com.vorontsov.githubrepsicerock.presentation.common.LoadingContent
 import com.vorontsov.githubrepsicerock.presentation.common.toDrawableRes
 import com.vorontsov.githubrepsicerock.presentation.common.toMessageRes
@@ -42,6 +43,7 @@ import com.vorontsov.githubrepsicerock.presentation.ui.theme.captionText
 import com.vorontsov.githubrepsicerock.presentation.ui.theme.primaryText
 import com.vorontsov.githubrepsicerock.presentation.ui.theme.screenTitle
 import com.vorontsov.githubrepsicerock.presentation.ui.theme.secondaryText
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -169,6 +171,8 @@ private fun RepositoryItem(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val languageColorProvider: LanguageColorProvider = koinInject()
+
     Surface(
         modifier = modifier
             .fillMaxWidth()
@@ -196,7 +200,8 @@ private fun RepositoryItem(
                     Text(
                         text = it,
                         style = MaterialTheme.typography.captionText,
-                        color = MaterialTheme.colorScheme.onBackground
+                        color = languageColorProvider.colorOf(it)
+                            ?: MaterialTheme.colorScheme.onBackground
                     )
                 }
             }

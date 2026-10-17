@@ -7,6 +7,7 @@ import com.vorontsov.githubrepsicerock.data.storage.KeyValueStorage
 import com.vorontsov.githubrepsicerock.domain.repository.AppRepository
 import com.vorontsov.githubrepsicerock.domain.usecase.GetUserRepositoriesWithoutForks
 import com.vorontsov.githubrepsicerock.presentation.auth.AuthViewModel
+import com.vorontsov.githubrepsicerock.presentation.common.LanguageColorProvider
 import com.vorontsov.githubrepsicerock.presentation.repositories.RepositoriesListViewModel
 import com.vorontsov.githubrepsicerock.presentation.details.RepositoryInfoViewModel
 import org.koin.core.module.dsl.bind
@@ -24,6 +25,8 @@ val appModule = module {
     singleOf(::GitHubApi)
 
     singleOf(::AppRepositoryImpl) { bind<AppRepository>() }
+
+    singleOf(::LanguageColorProvider)
 
     viewModel {
         AuthViewModel(get())
